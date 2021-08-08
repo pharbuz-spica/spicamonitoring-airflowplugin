@@ -1,0 +1,255 @@
+{
+  "name": "custom.python.apache_spark_dt_plugin",
+  "version": "0.19",
+  "type": "python",
+  "entity": "PROCESS_GROUP_INSTANCE",
+  "technologies": [
+    "APACHE_SPARK"
+  ],
+  "source": {
+    "package": "apache_spark_dt_plugin",
+    "className": "ApacheSparkDTPlugin",
+    "install_requires": [
+       "requests>=2.6.0"
+    ],
+    "activation": "Singleton"
+  },
+  "metricGroup": "Apache_Spark_Custom",
+  "metrics": [
+    {
+      "timeseries": {
+        "key": "status_num",
+        "unit": "Count",
+        "displayname": "Status Code",
+        "dimensions": ["job_name"]
+      }
+    },
+    {
+      "timeseries": {
+        "key": "numTasks",
+        "unit": "Count",
+        "displayname": "numTasks",
+        "dimensions": ["job_name"]
+      }
+    },
+    {
+      "timeseries": {
+        "key": "numActiveTasks",
+        "unit": "Count",
+        "displayname": "numActiveTasks",
+        "dimensions": ["job_name"]
+      }
+    },
+    {
+      "timeseries": {
+        "key": "numCompletedTasks",
+        "unit": "Count",
+        "displayname": "numCompletedTasks",
+        "dimensions": ["job_name"]
+      }
+    },
+    {
+      "timeseries": {
+        "key": "numSkippedTasks",
+        "unit": "Count",
+        "displayname": "numSkippedTasks",
+        "dimensions": ["job_name"]
+      }
+    },
+    {
+      "timeseries": {
+        "key": "numFailedTasks",
+        "unit": "Count",
+        "displayname": "numFailedTasks",
+        "dimensions": ["job_name"]
+      }
+    },
+    {
+      "timeseries": {
+        "key": "numActiveStages",
+        "unit": "Count",
+        "displayname": "numActiveStages",
+        "dimensions": ["job_name"]
+      }
+    },
+    {
+      "timeseries": {
+        "key": "numCompletedStages",
+        "unit": "Count",
+        "displayname": "numCompletedStages",
+        "dimensions": ["job_name"]
+      }
+    },
+    {
+      "timeseries": {
+        "key": "numSkippedStages",
+        "unit": "Count",
+        "displayname": "numSkippedStages",
+        "dimensions": ["job_name"]
+      }
+    },
+    {
+      "timeseries": {
+        "key": "numFailedStages",
+        "unit": "Count",
+        "displayname": "numFailedStages",
+        "dimensions": ["job_name"]
+      }
+    },
+    {
+      "timeseries": {
+        "key": "rddBlocks",
+        "unit": "Count",
+        "displayname": "Executor | rddBlocks",
+        "dimensions": ["app_name", "exec_id"]
+      }
+    },
+    {
+      "timeseries": {
+        "key": "memoryUsed",
+        "unit": "Count",
+        "displayname": "Executor | memoryUsed",
+        "dimensions": ["app_name", "exec_id"]
+      }
+    },
+    {
+      "timeseries": {
+        "key": "diskUsed",
+        "unit": "Count",
+        "displayname": "Executor | diskUsed",
+        "dimensions": ["app_name", "exec_id"]
+      }
+    },
+    {
+      "timeseries": {
+        "key": "totalCores",
+        "unit": "Count",
+        "displayname": "Executor | totalCores",
+        "dimensions": ["app_name", "exec_id"]
+      }
+    },
+    {
+      "timeseries": {
+        "key": "maxTasks",
+        "unit": "Count",
+        "displayname": "Executor | maxTasks",
+        "dimensions": ["app_name", "exec_id"]
+      }
+    },
+    {
+      "timeseries": {
+        "key": "activeTasks",
+        "unit": "Count",
+        "displayname": "Executor | activeTasks",
+        "dimensions": ["app_name", "exec_id"]
+      }
+    },
+    {
+      "timeseries": {
+        "key": "failedTasks",
+        "unit": "Count",
+        "displayname": "Executor | failedTasks",
+        "dimensions": ["app_name", "exec_id"]
+      }
+    },
+    {
+      "timeseries": {
+        "key": "completedTasks",
+        "unit": "Count",
+        "displayname": "Executor | completedTasks",
+        "dimensions": ["app_name", "exec_id"]
+      }
+    },
+    {
+      "timeseries": {
+        "key": "totalTasks",
+        "unit": "Count",
+        "displayname": "Executor | totalTasks",
+        "dimensions": ["app_name", "exec_id"]
+      }
+    },
+    {
+      "timeseries": {
+        "key": "totalDuration",
+        "unit": "Count",
+        "displayname": "Executor | totalDuration",
+        "dimensions": ["app_name", "exec_id"]
+      }
+    },
+    {
+      "timeseries": {
+        "key": "totalGCTime",
+        "unit": "Count",
+        "displayname": "Executor | totalGCTime",
+        "dimensions": ["app_name", "exec_id"]
+      }
+    },
+    {
+      "timeseries": {
+        "key": "totalInputBytes",
+        "unit": "Count",
+        "displayname": "Executor | totalInputBytes",
+        "dimensions": ["app_name", "exec_id"]
+      }
+    },
+    {
+      "timeseries": {
+        "key": "totalShuffleRead",
+        "unit": "Count",
+        "displayname": "Executor | totalShuffleRead",
+        "dimensions": ["app_name", "exec_id"]
+      }
+    },
+    {
+      "timeseries": {
+        "key": "totalShuffleWrite",
+        "unit": "Count",
+        "displayname": "Executor | totalShuffleWrite",
+        "dimensions": ["app_name", "exec_id"]
+      }
+    },
+    {
+      "timeseries": {
+        "key": "maxMemory",
+        "unit": "Count",
+        "displayname": "Executor | maxMemory",
+        "dimensions": ["app_name", "exec_id"]
+      }
+    },
+    {
+      "timeseries": {
+        "key": "usedOnHeapStorageMemory",
+        "unit": "Count",
+        "displayname": "Executor | usedOnHeapStorageMemory",
+        "dimensions": ["app_name", "exec_id"]
+      }
+    },
+    {
+      "timeseries": {
+        "key": "usedOffHeapStorageMemory",
+        "unit": "Count",
+        "displayname": "Executor | usedOffHeapStorageMemory",
+        "dimensions": ["app_name", "exec_id"]
+      }
+    },
+    {
+      "timeseries": {
+        "key": "totalOnHeapStorageMemory",
+        "unit": "Count",
+        "displayname": "Executor | totalOnHeapStorageMemory",
+        "dimensions": ["app_name", "exec_id"]
+      }
+    },
+    {
+      "timeseries": {
+        "key": "totalOffHeapStorageMemory",
+        "unit": "Count",
+        "displayname": "Executor | totalOffHeapStorageMemory",
+        "dimensions": ["app_name", "exec_id"]
+      }
+    }
+  ],
+  "configUI": {
+    "displayName": "SpicaSolutions Apache Spark Plugin"
+  }
+}
